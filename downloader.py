@@ -37,8 +37,8 @@ while True:
         user_id = user_data['user']['id']
         username = user_data['user']['username']
         pp = user_data['pp']
-        playcount = user_data['playcount']
-        print(f" {user_id} - {username} - {pp}pp")
+        playcount = user_data["play_count"]
+        print(f" {user_id} - {username} - {pp}pp | плейкаунт : {playcount}")
     current_cursor = data.get('cursor_string')
     
     if not current_cursor:

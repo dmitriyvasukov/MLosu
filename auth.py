@@ -1,12 +1,13 @@
 import requests
+import os 
+from dotenv import load_dotenv
 
+load_dotenv()
 
 
 
 
 def get_token():
-    client_id = 43370
-    client_secret = 'RmI7HF6V8gXTERCcm21a794w5zvuxXOA1L8UU1NF'
     headers = {
              "Accept": "application/json",
              "Content-Type": "application/x-www-form-urlencoded",
@@ -14,8 +15,8 @@ def get_token():
 
 
     data = {
-            'client_id': client_id,
-            'client_secret': client_secret,
+            'client_id': os.getenv("client_id"),
+            'client_secret': os.getenv("client_secret"),
             'grant_type': 'client_credentials',
             'scope': 'public'
         }
