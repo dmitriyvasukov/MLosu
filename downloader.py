@@ -8,18 +8,16 @@ headers = {
     "Authorization": f"Bearer {token}"
 }
 
-# Начальные параметры
+
 params = {
-    # Дополнительные параметры, если нужны
-    # "sort": "score_desc"  # если требуется сортировка
+
 }
 
 current_cursor = None
-max_pages = 5  # Максимальное количество страниц (можно убрать или изменить)
+max_pages = 5 
 page_count = 0
 
 while True:
-    # Если есть курсор, добавляем его в параметры
     if current_cursor:
         params["cursor_string"] = current_cursor
     
